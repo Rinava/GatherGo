@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import LoginBtn from './../../../../components/loginBtn';
+import LoginBtn from '@/../components/LoginBtn';
 
 export const metadata: Metadata = {
   title: 'Login',
