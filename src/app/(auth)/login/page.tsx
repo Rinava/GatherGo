@@ -4,7 +4,7 @@ import LoginBtn from '@/../components/LoginBtn';
 
 export const metadata: Metadata = {
   title: 'Login',
-  description: 'Login to your account',
+  description: 'Please Login to your account',
 };
 
 export default function LoginPage() {
