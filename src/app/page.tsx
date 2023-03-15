@@ -1,16 +1,14 @@
 'use client';
 import styles from './page.module.css';
-import { useSession } from 'next-auth/react';
+import  LoginBtn  from '@/../components/LoginBtn';
 
 export default function Home() {
-  const { data: session } = useSession();
   return (
     <main className={styles.main}>
-      {session ? (
-        <p>Logged in as {session?.user?.email}</p>
-      ) : (
-        <p>Not logged in</p>
-      )}
+      <h1 className={styles.title}>
+        Gather Go  
+      </h1>
+      <LoginBtn />
     </main>
   );
 }
