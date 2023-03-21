@@ -1,14 +1,14 @@
 'use client';
 import styles from './page.module.css';
-import  LoginBtn  from '@/../components/LoginBtn';
+import  Login  from '@/../components/Login';
+import  Card  from '@/../components/Card';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>
-        Gather Go  
-      </h1>
-      <LoginBtn />
+      {/* <Login /> */}
+      <Card />
+      <Card />
     </main>
   );
 }
