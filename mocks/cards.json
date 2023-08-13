@@ -1,0 +1,11 @@
+[
+  {
+    "id": "dsadas",
+    "group": "Family",
+    "activities": ["Dinner", "Play"]
+  },
+  { "id": "dsa321321das",
+    "group": "Work",
+    "activities": ["Eat", "Have fun"]
+  }
+]
