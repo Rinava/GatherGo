@@ -1,7 +1,11 @@
 import styles from './styles.module.css';
 import Image from 'next/image';
 
-const Card = ({}: CardProps) => {
+interface CardProps {
+  group: string;
+  activities: string[];
+}
+const Card = ({ group, activities }: CardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
@@ -32,11 +36,15 @@ const Card = ({}: CardProps) => {
       </div>
       <h3 className={styles.subtitle}>Last added</h3>
       <ul className={styles.activities}>
-        <li className={styles.activity}>Item 1</li>
-        <li className={styles.activity}>Item 2</li>
-        <li className={styles.activity}>Item 3</li>
+        {activities.map((activity) => {
+          return (
+            <li className={styles.activity} key={activity}>
+              {activity}
+            </li>
+          );
+        })}
       </ul>
-      <button className={styles.randomize} >Randomize</button>
+      <button className={styles.randomize}>Randomize</button>
     </div>
   );
 };
