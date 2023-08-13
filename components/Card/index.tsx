@@ -1,10 +1,26 @@
 import styles from './styles.module.css';
+import Link from 'next/link';
 import Image from 'next/image';
+import clsx from 'clsx';
 
-const Card = ({}: CardProps) => {
+interface CardProps {
+  id: string;
+  title?: string;
+  activities?: activity[];
+  people?: string[];
+  className?: string;
+}
+interface activity {
+  id: string;
+  title: string;
+  description?: string;
+  location?: string;
+}
+
+const Card = ({ id, title, activities, people, className }: CardProps) => {
   return (
-    <div className={styles.card}>
-      <div className={styles.header}>
+    <div className={clsx(styles.card, className)}>
+      <Link className={styles.header} href='/groups/[id]' as={`/groups/${id}`}>
         <div className={styles.people}>
           <Image
             className={styles.profile}
@@ -28,15 +44,25 @@ const Card = ({}: CardProps) => {
             height={50}
           />
         </div>
-        <h2 className={styles.title}>Card Title</h2>
-      </div>
+        <h2 className={styles.title}>{title}</h2>
+      </Link>
       <h3 className={styles.subtitle}>Last added</h3>
       <ul className={styles.activities}>
-        <li className={styles.activity}>Item 1</li>
-        <li className={styles.activity}>Item 2</li>
-        <li className={styles.activity}>Item 3</li>
+        {activities ? (
+          activities.map((activity) => (
+            <li key={activity.id} className={styles.activity}>
+              <Link
+                href='/groups/[id]/activities/[activityId]'
+                as={`/groups/${id}/activities/${activity.id}`}>
+                {activity.title}
+              </Link>
+            </li>
+          ))
+        ) : (
+          <p>No activities yet, be the first to add</p>
+        )}
       </ul>
-      <button className={styles.randomize} >Randomize</button>
+      <button className={styles.randomize}>Randomize</button>
     </div>
   );
 };

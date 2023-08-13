@@ -1,0 +1,85 @@
+{
+  "groups": [
+    {
+      "id": "1",
+      "title": "Family",
+      "description": "Family is the most important thing in the world",
+      "people":[
+        "John",
+        "Jane",
+        "Jack"
+      ],
+      "activities": [
+        {
+          "id": "1",
+          "title": "Go to the park",
+          "description": "Go to the park and play with the kids",
+          "location": "Central Park",
+          "proposed":{
+            "id":"1",
+            "name":"Susan Mayer",
+            "image":"https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"
+
+          }
+        },
+        {
+          "id": "2",
+          "title": "Go to the movies",
+          "description": "Go to the movies and watch a movie",
+          "location": "AMC",
+          "proposed":{
+            "id":"1",
+            "name":"Susana",
+            "image":"https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"
+
+          }
+        },
+        {
+          "id": 3,
+          "title": "Go to the beach",
+          "description": "Go to the beach and play with the kids",
+          "location": "Jones Beach",
+          "proposed":{
+            "id":"1",
+            "name":"Susan Mayer",
+            "image":"https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"
+
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Friends",
+      "description": "Friends are the family you choose",
+      "people":[
+        "John",
+        "Lulu",
+        "Susan"
+      ],
+      "activities": [
+        { "id": "1",
+          "title": "Go to the bar",
+          "description": "Go to the bar and have a drink",
+          "location": "The Bar"
+        },
+        {
+          "id": "2",
+          "title": "Go to the movies",
+          "description": "Go to the movies and watch a movie",
+          "location": "AMC"
+        }
+      ]
+    },
+    {
+        "id": "3",
+        "title": "School",
+        "description": "Friends are the family you choose",
+        "people":[
+          "John",
+          "Lulu",
+          "Susan"
+        ]
+      }
+  ]
+}

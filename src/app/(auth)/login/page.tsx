@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import LoginBtn from '@/../components/LoginBtn';
+import Login from '@/../components/Login';
 
 export const metadata: Metadata = {
   title: 'Login',
@@ -10,18 +10,14 @@ export const metadata: Metadata = {
 export default function LoginPage() {
   return (
     <div>
-      <Link href='/'>
-        <>Back</>
-      </Link>
+      <Link href='/'>Back</Link>
       <div>
         <div>
           <h1>Welcome back</h1>
           <p>Enter your email to sign in to your account</p>
-          <LoginBtn />
+          <Login />
         </div>
-        <p>
-          <Link href='/register'>Don&apos;t have an account? Sign Up</Link>
-        </p>
+        <Link href='/register'>Don&apos;t have an account? Sign Up</Link>
       </div>
     </div>
   );
