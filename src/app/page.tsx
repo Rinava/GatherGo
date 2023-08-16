@@ -15,7 +15,7 @@ export default function Home() {
     
   return (
     <main className={styles.main}>
-      {/* <Login /> */}
+      <Login />
        {/* <button onClick={AddUser}>Add User</button> */}
     </main>
   );

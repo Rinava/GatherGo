@@ -7,9 +7,10 @@
   --bg-color: #4e0568;
 
   --primary-1: #1790aa;
-  --primary-2: #1790AA5E;
-  
-  --secondary-1: #C175C8CF;
+  --primary-2: #1790aa5e;
+  --primary-2-71: rgb(23, 144, 170, 71%);
+  --secondary-1: #c175c8cf;
+  --secondary-2: #ad2da7;
 
   --neutral-1: #fde5ff;
   --neutral-2: #d9d9d9;

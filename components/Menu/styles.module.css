@@ -1,0 +1,56 @@
+.menu {
+  display: none;
+  position: fixed;
+  inset: 0; /*  is the same as top: 0; right: 0; bottom: 0; left: 0; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: hidden;
+  background-color: var(--primary-2-71);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+.open {
+  display: block;
+}
+
+.close {
+  background: none;
+  border: none;
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: var(--neutral-1);
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 6rem;
+}
+
+.link {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+}
+
+.link:hover:not(.active),
+.close:hover {
+  color: var(--secondary-2);
+  filter: drop-shadow(0 0 1rem var(--secondary-2));
+}
+.link:hover:not(.active) {
+  text-decoration: underline;
+}
+.active {
+  text-decoration: underline wavy var(--neutral-1); /*TODO animate the wave */
+  cursor: default;
+}
